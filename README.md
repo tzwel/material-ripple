@@ -7,6 +7,7 @@ ripple {position: absolute;background-color: white;border-radius: 50%;opacity: .
 ripple.ripple-closing{opacity:0}
 ```
 ## Usage
+### Manually
 ```html
 <button onmousedown="ripple({
 	'node': this,
@@ -14,4 +15,17 @@ ripple.ripple-closing{opacity:0}
 	'size': .6,
 	'maxSize': 1.1
 })"> Some text </button>
+```
+
+### Programatically
+```javascript
+document.querySelectorAll('button').forEach(element => {
+	element.addEventListener('mousedown', ()=> {
+		ripple({'node':element,
+				'speed': 1.1,
+				'size': .6,
+				'maxSize': 1.1
+		})
+	})
+})
 ```
