@@ -1,4 +1,8 @@
-function ripple(settings) {
+function ripple(settings={
+	'node': this,
+	'speed': 1.1,
+	'size': .6,
+	'maxSize': 1.1}) {
 
 	if (!settings.node.innerHTML.includes('<ripple')) {
 		const rippleColor = window.getComputedStyle(settings.node).getPropertyValue("color");
@@ -25,7 +29,7 @@ function ripple(settings) {
 
 			ripple.style.top = dimensions.y/2 - rippleWidth/2 + 'px'
 			ripple.style.left = dimensions.x/2 - rippleWidth/2 + 'px'
-			ripple.style.transform = "scale(1.1)";
+			ripple.style.transform = `scale(${settings.maxSize})`;
 		}, 0);
 
 		document.addEventListener('mouseup', ()=> {
@@ -36,7 +40,7 @@ function ripple(settings) {
 				function deleteRipple() {
 					ripple.remove();
 				}
-			}, 250);
+			}, 450);
 	
 	
 		})
