@@ -29,3 +29,16 @@ document.querySelectorAll('button').forEach(element => {
 	})
 })
 ```
+
+#### SPA friendly
+```javascript
+document.addEventListener('mousedown', (e)=> {
+    if (e.target.tagName === 'BUTTON') {
+        ripple({'node':e.target,
+		'speed': 1.1,
+		'size': .6,
+		'maxSize': 1.1
+        })
+    }
+})
+```
