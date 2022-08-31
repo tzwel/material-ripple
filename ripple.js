@@ -29,11 +29,16 @@ function ripple(settings) {
 		}, 0);
 
 		document.addEventListener('mouseup', ()=> {
-			ripple.classList.add('ripple-closing');
-			window.setTimeout(deleteRipple, settings.speed * 1000);
-			function deleteRipple() {
-				ripple.remove();
-			}
+
+			setTimeout(function(){
+				ripple.classList.add('ripple-closing');
+				window.setTimeout(deleteRipple, settings.speed * 1000);
+				function deleteRipple() {
+					ripple.remove();
+				}
+			}, 250);
+	
+	
 		})
 	
 	}
