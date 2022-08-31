@@ -3,7 +3,7 @@ A faithful recreation of Google's material ripple effect
 
 ## Additional CSS
 ```css
-ripple {position: absolute;background-color: white;border-radius: 50%;opacity: .3}
+ripple {position: absolute;background-color: white;border-radius: 50%;opacity: .3;pointer-events: none;}
 ripple.ripple-closing{opacity:0}
 ```
 ## Usage
