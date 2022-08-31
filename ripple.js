@@ -4,7 +4,8 @@ function ripple(settings={
 	'size': .6,
 	'maxSize': 1.1}) {
 
-	if (!settings.node.innerHTML.includes('<ripple')) {
+
+
 		const rippleColor = window.getComputedStyle(settings.node).getPropertyValue("color");
 
 		const dimensions = {
@@ -45,6 +46,6 @@ function ripple(settings={
 	
 		})
 	
-	}
+	
 
 }
