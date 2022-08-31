@@ -10,7 +10,8 @@ ripple.ripple-closing{opacity:0}
 ```html
 <button onmousedown="ripple({
 	'node': this,
-	'speed': 1.2,
-	'size': 0.6
+	'speed': 1,
+	'size': .6,
+	'maxSize': 1.1
 })"> Some text </button>
 ```
