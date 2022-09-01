@@ -22,9 +22,9 @@ ripple.ripple-closing{opacity:0}
 document.querySelectorAll('button').forEach(element => {
 	element.addEventListener('mousedown', ()=> {
 		ripple({'node':element,
-				'speed': 1.1,
-				'size': .6,
-				'maxSize': 1.1
+			'speed': 1.1,
+			'size': .6,
+			'maxSize': 1.1
 		})
 	})
 })
