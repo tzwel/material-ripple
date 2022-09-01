@@ -6,6 +6,10 @@ A faithful recreation of Google's material ripple effect
 ripple {position: absolute;background-color: white;border-radius: 50%;opacity: .3;pointer-events: none;}
 ripple.ripple-closing{opacity:0}
 ```
+
+> **Note**
+> To display the ripple effect correctly, elements need their `position`s to be set to `relative`
+
 ## Usage
 ### Manually
 ```html
