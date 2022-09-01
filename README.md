@@ -55,3 +55,5 @@ document.addEventListener('mousedown', (e)=> {
 	background-color: rgb(18, 165, 140);
 }
 ```
+> **Note**
+> Depending on your case, an `!important` may be needed
