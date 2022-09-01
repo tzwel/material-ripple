@@ -52,6 +52,6 @@ document.addEventListener('mousedown', (e)=> {
 ## Overriding colors
 ```css
 .class > ripple {
-	background-color: rgb(18, 165, 140) !important;
+	background-color: rgb(18, 165, 140);
 }
 ```
