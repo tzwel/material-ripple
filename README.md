@@ -48,3 +48,10 @@ document.addEventListener('mousedown', (e)=> {
 ```
 > **Note**
 > If you want to use the ripple effect on certain elements tagged with an attribute, go with `e.target.hasAttribute('ripple')`
+
+## Overriding colors
+```css
+.class > ripple {
+	background-color: rgb(18, 165, 140) !important;
+}
+```
