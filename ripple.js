@@ -26,7 +26,7 @@ function ripple(settings={
 		ripple.style.background = rippleColor
 
 		setTimeout(function(){
-			ripple.style.transition = `top ${settings.speed}s, left ${settings.speed}s, width ${settings.speed}s, height ${settings.speed}s, transform ${.4}s, opacity ${settings.speed}s`
+			ripple.style.transition = `top ${settings.speed}s, left ${settings.speed}s, width ${settings.speed}s, height ${settings.speed}s, transform ${.2}s, opacity ${settings.speed}s`
 
 			ripple.style.top = dimensions.y/2 - rippleWidth/2 + 'px'
 			ripple.style.left = dimensions.x/2 - rippleWidth/2 + 'px'
@@ -41,7 +41,7 @@ function ripple(settings={
 				function deleteRipple() {
 					ripple.remove();
 				}
-			}, 450);
+			}, 200);
 	
 	
 		})
