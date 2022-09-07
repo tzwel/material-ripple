@@ -15,9 +15,9 @@ ripple.ripple-closing{opacity:0}
 ```html
 <button onmousedown="ripple({
 	'node': this,
-	'speed': 1,
-	'size': .6,
-	'maxSize': 1.1
+	'speed': .3,
+	'size': .7,
+	'maxSize': 1.3
 })"> Some text </button>
 ```
 
@@ -26,9 +26,9 @@ ripple.ripple-closing{opacity:0}
 document.querySelectorAll('button').forEach(element => {
 	element.addEventListener('mousedown', ()=> {
 		ripple({'node':element,
-			'speed': 1.1,
-			'size': .6,
-			'maxSize': 1.1
+			'speed': .3,
+			'size': .7,
+			'maxSize': 1.3
 		})
 	})
 })
@@ -39,9 +39,9 @@ document.querySelectorAll('button').forEach(element => {
 document.addEventListener('mousedown', (e)=> {
     if (e.target.tagName === 'BUTTON') {
         ripple({'node':e.target,
-		'speed': 1.1,
-		'size': .6,
-		'maxSize': 1.1
+		'speed': .3,
+		'size': .7,
+		'maxSize': 1.3
         })
     }
 })
