@@ -4,7 +4,7 @@ function ripple(settings={
 	'size': .6,
 	'maxSize': 1.1}) {
 
-
+		const decaySpeed = .5;
 
 		const rippleColor = window.getComputedStyle(settings.node).getPropertyValue("color");
 
@@ -26,26 +26,22 @@ function ripple(settings={
 		ripple.style.background = rippleColor
 
 		setTimeout(function(){
-			ripple.style.transition = `top ${settings.speed}s, left ${settings.speed}s, width ${settings.speed}s, height ${settings.speed}s, transform ${.2}s, opacity ${settings.speed}s`
+			ripple.style.transition = `top ${settings.speed}s, left ${settings.speed}s, width ${settings.speed}s, height ${settings.speed}s, transform ${.3}s, opacity ${decaySpeed}s`
 
 			ripple.style.top = dimensions.y/2 - rippleWidth/2 + 'px'
 			ripple.style.left = dimensions.x/2 - rippleWidth/2 + 'px'
 			ripple.style.transform = `scale(${settings.maxSize})`;
 		}, 0);
 
-		document.addEventListener('mouseup', ()=> {
+		window.setTimeout(deleteRipple, settings.speed * 1000/2);
+
+		function deleteRipple() {
+			ripple.classList.add('ripple-closing');
 
 			setTimeout(function(){
-				ripple.classList.add('ripple-closing');
-				window.setTimeout(deleteRipple, settings.speed * 1000);
-				function deleteRipple() {
-					ripple.remove();
-				}
-			}, 200);
-	
-	
-		})
-	
-	
+				ripple.remove();
+			}, decaySpeed * 1000);
+			
+		}
 
 }
