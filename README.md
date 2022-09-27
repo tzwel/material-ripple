@@ -39,9 +39,9 @@ document.querySelectorAll('button').forEach(element => {
 document.addEventListener('mousedown', (e)=> {
     if (e.target.tagName === 'BUTTON') {
         ripple({'node':e.target,
-		'speed': .3,
-		'size': .7,
-		'maxSize': 1.3
+      		'speed': .8,
+      		'size': .5,
+     	        'maxSize': 1.3
         })
     }
 })
